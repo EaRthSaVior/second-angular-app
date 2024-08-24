@@ -1,12 +1,9 @@
-import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
-import { Component, inject, input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { InvestmentResults } from './investment-results.model';
 import { InvestmentService } from './investment.service';
 
 @Component({
   selector: 'app-investment-results',
-  standalone: true,
-  imports: [NgIf, NgFor, CurrencyPipe],
   templateUrl: './investment-results.component.html',
   styleUrl: './investment-results.component.css',
 })
