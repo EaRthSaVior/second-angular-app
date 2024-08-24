@@ -1,4 +1,4 @@
-<p *ngIf="!results; else investmentResults" class="center">
+<p *ngIf="!results(); else investmentResults" class="center">
   Please enter some values and press "Calculate"
 </p>
 <ng-template #investmentResults>
@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let result of results; trackby: trackByYear">
+      <tr *ngFor="let result of results(); trackby: trackByYear">
         <td>{{ result.year }}</td>
         <td>{{ result.valueEndOfYear | currency }}</td>
         <td>{{ result.interest | currency }}</td>

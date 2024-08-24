@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { InvestmentResults } from './investment-results.model';
 import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
+import { Component, input } from '@angular/core';
+import { InvestmentResults } from './investment-results.model';
 
 @Component({
   selector: 'app-investment-results',
@@ -10,8 +10,7 @@ import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
   styleUrl: './investment-results.component.css',
 })
 export class InvestmentResultsComponent {
-  @Input() results?: InvestmentResults[];
-
+  results = input<InvestmentResults[]>();
   trackByYear(result: InvestmentResults) {
     return result.year;
   }
